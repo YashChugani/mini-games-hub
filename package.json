@@ -2,6 +2,7 @@
   "name": "mini-games-hub",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://YashChugani.github.io/mini-games-hub",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -12,8 +13,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://YashChugani.github.io/mini-games-hub"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
