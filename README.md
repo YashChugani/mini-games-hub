@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# 🎮 Mini Games Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Mini Games Hub** — a collection of fun, interactive games built with **React.js**! This project features a clean and responsive UI, multiple mini-games, and AI-powered opponents to keep you engaged. It's designed to be easily scalable and customizable, making it a great starting point for exploring React development and game design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo  
+👉 **[Mini Games Hub](https://YashChugani.github.io/mini-games-hub)**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🖥️ Features  
+✅ **Landing Page** – A beautifully designed landing page that lists all available games with hover animations and game icons.  
+✅ **Dark Theme** – Consistent dark theme with smooth UI transitions.  
+✅ **Automated Opponents** – Games like Rock, Paper, Scissors feature automated/computer opponents with different strategies.  
+✅ **Easy Navigation** – Back buttons and clear routing make switching between games seamless.  
+✅ **Mobile Friendly** – Fully responsive design for a smooth experience on all devices.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 Games Included  
+### 1. **Tic-Tac-Toe**  
+- Classic game where the goal is to line up three X's or O's in a row.  
+- Play against a friend in a 2-player environment.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. **Rock, Paper, Scissors**  
+- The classic hand game.  
+- AI opponent makes a random choice each time.  
 
-### `npm run build`
+### 3. **Memory Card Game** 
+- Flip cards and match pairs.  
+- Keep track of moves and time.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. **Number Guessing Game**
+- Guess the number within a limited number of tries.  
+- Feedback is provided to help you narrow down the range.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Tech Stack  
+| Technology | Description |
+|------------|-------------|
+| **React.js** | Frontend framework for building UI components |
+| **JavaScript (ES6+)** | Logic and interactivity |
+| **CSS** | Styling and responsive design |
+| **React Router** | Handles page navigation |
+| **React Icons** | Adds icons to buttons and labels |
+| **GitHub Pages** | For deployment |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎨 UI/UX Details  
+✔️ Clean dark theme for consistent look and feel.  
+✔️ Hover effects and visual feedback for better interactivity.  
+✔️ Centered layout for a balanced, modern design.  
+✔️ Custom back buttons for easy navigation.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 Project Structure  
+```
+mini-games-hub/
+├── public/                  # Static assets
+├── src/
+│   ├── components/          # React components
+│   │   ├── LandingPage.jsx
+│   │   ├── TicTacToe.jsx
+│   │   ├── RockPaperScissors.jsx
+|   |   |== NumberGuessingGame.jsx
+|   |   |== MemoryCardGame.jsx
+│   ├── styles.css           # Global styles
+│   ├── App.jsx              # Main app component
+│   ├── index.jsx            # React entry point
+├── .gitignore               # Files to ignore in git
+├── package.json             # Project metadata and scripts
+├── README.md                # Project documentation
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Installation  
+### 1. **Clone the Repository**  
+```
+git clone https://github.com/YashChugani/mini-games-hub.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. **Navigate to the Project Directory**  
+```
+cd mini-games-hub
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. **Install Dependencies**  
+```
+npm install
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Usage  
+### Start the development server:  
+```
+npm start
+```
+- The project will be available at **http://localhost:3000**.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚢 Deployment  
+1. Add the following to your **package.json**:  
+```json
+"homepage": "https://YashChugani.github.io/mini-games-hub"
+```
 
-### Making a Progressive Web App
+2. Add the following deployment scripts:  
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Deploy the project:  
+```bash
+npm run deploy
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌟 Future Improvements  
+- ✅ Add scoring system for each game.  
+- ✅ Add game state persistence using `localStorage`.  
+- ✅ Add sound effects for better user experience.  
+- ✅ Implement more AI strategies for Tic-Tac-Toe and Rock, Paper, Scissors.  
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 Author  
+**Yash Chugani** – [GitHub](https://github.com/YashChugani)  
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License  
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
+
+---
+
+## 💖 Acknowledgments  
+Special thanks to the React community for their awesome documentation and support!  
+
+---
