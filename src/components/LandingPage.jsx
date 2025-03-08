@@ -4,6 +4,7 @@ import { FaGamepad, FaDice, FaBrain, FaPuzzlePiece } from 'react-icons/fa';
 import '../styles.css';
 
 export default function LandingPage() {
+    console.log("LandingPage mounted");
     const navigate = useNavigate();
 
     return (

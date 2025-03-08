@@ -6,6 +6,7 @@ import NumberGuessingGame from './components/NumberGuessingGame';
 import MemoryCardGame from './components/MemoryCardGame';
 
 function App() {
+  console.log("App loaded");
   return (
     <Router>
       <Routes>
