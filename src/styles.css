@@ -1,0 +1,502 @@
+/* ==================== General Styling ==================== */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at top left, #1c1c1c, #1a1a1a);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.back-button {
+    position: fixed;
+    /* Fixed at top left corner */
+    top: 20px;
+    left: 20px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    z-index: 999;
+    /* Ensures it's above other elements */
+}
+
+.back-button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* ==================== Landing Page Styling ==================== */
+/* General container styling */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;/* Dark background */
+    color: white;
+    background: linear-gradient(135deg, #1c1c1c, #121212);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Game list container */
+.game-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Button styling */
+.game-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect */
+.game-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #007bff;
+}
+
+/* Active button */
+.game-button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Icon styling */
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* ==================== Tic-Tac-Toe Styling ==================== */
+.game-heading {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Tic Tac Toe Board Styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+/* Individual Cell Styling */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 2.5rem;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Winning Cells Styling */
+.winning-cell {
+    background-color: #4caf50;
+    transform: translateY(-5px);
+    /* Rise effect */
+    animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+/* Draw Cells Styling */
+.draw-cell {
+    background-color: #ffeb3b;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #4caf50;
+    }
+
+    to {
+        box-shadow: 0 0 20px #4caf50;
+    }
+}
+
+/* Disabled Cell Styling */
+.cell:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Game Status Message */
+.status {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+/* Reset Button Styling */
+.reset-btn {
+    margin-top: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.reset-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* ==================== Rock-Paper-Scissors Styling ==================== */
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.choice-btn {
+    font-size: 1.5rem;
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.choice-btn:hover {
+    background-color: #505050;
+    transform: translateY(-3px);
+}
+
+.result-text {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.result-text.win {
+    color: #4caf50;
+    /* Green for win */
+}
+
+.result-text.lose {
+    color: #f44336;
+    /* Red for lose */
+}
+
+.result-text.draw {
+    color: #ff9800;
+    /* Orange for draw */
+}
+
+.choice-result {
+    font-size: 1.25rem;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.reset-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.reset-btn {
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.reset-btn:hover {
+    background-color: #505050;
+    transform: translateY(-3px);
+}
+
+.reset-score-btn {
+    background-color: #f44336;
+}
+
+.reset-score-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+/* ==================== Number Guessing Game Styling ==================== */
+.range-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.range-selector input {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 2px solid #555;
+    padding: 0.5rem;
+    border-radius: 6px;
+    width: 5rem;
+}
+
+.guess-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.guess-input input {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 2px solid #555;
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 12rem;
+}
+
+.submit-btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.feedback {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.attempts {
+    color: #bbbbbb;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.guess-input {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.guess-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.submit-btn {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.attempts-left {
+    font-size: 1.25rem;
+    color: #ffeb3b;
+    margin-top: 0.5rem;
+}
+
+.guess-list {
+    font-size: 1.25rem;
+    color: #ff9800;
+    margin-top: 1rem;
+}
+
+.range-setting {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.range-input {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    width: 4rem;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.start-btn {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #1976d2;
+}
+
+
+
+
+
+/* ========== Memory Card Game Styling ========== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.flipped {
+    background-color: #505050;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: #4caf50;
+    border-color: #388e3c;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.status {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #ffeb3b;
+}
