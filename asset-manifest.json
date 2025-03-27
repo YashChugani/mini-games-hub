@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mini-games-hub/static/css/main.244d00f2.css",
-    "main.js": "/mini-games-hub/static/js/main.19d9174b.js",
+    "main.css": "/mini-games-hub/static/css/main.372e302b.css",
+    "main.js": "/mini-games-hub/static/js/main.d5173059.js",
     "static/js/453.03d7205d.chunk.js": "/mini-games-hub/static/js/453.03d7205d.chunk.js",
     "index.html": "/mini-games-hub/index.html",
-    "main.244d00f2.css.map": "/mini-games-hub/static/css/main.244d00f2.css.map",
-    "main.19d9174b.js.map": "/mini-games-hub/static/js/main.19d9174b.js.map",
+    "main.372e302b.css.map": "/mini-games-hub/static/css/main.372e302b.css.map",
+    "main.d5173059.js.map": "/mini-games-hub/static/js/main.d5173059.js.map",
     "453.03d7205d.chunk.js.map": "/mini-games-hub/static/js/453.03d7205d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.244d00f2.css",
-    "static/js/main.19d9174b.js"
+    "static/css/main.372e302b.css",
+    "static/js/main.d5173059.js"
   ]
 }
