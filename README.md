@@ -12,9 +12,11 @@ Welcome to **Mini Games Hub** — a collection of fun, interactive games built w
 ## 🖥️ Features  
 ✅ **Landing Page** – A beautifully designed landing page that lists all available games with hover animations and game icons.  
 ✅ **Dark Theme** – Consistent dark theme with smooth UI transitions.  
+✅ **Loading Animation** – Custom loading animation using Lottie for a polished user experience.  
 ✅ **Automated Opponents** – Games like Rock, Paper, Scissors feature automated/computer opponents with different strategies.  
 ✅ **Easy Navigation** – Back buttons and clear routing make switching between games seamless.  
 ✅ **Mobile Friendly** – Fully responsive design for a smooth experience on all devices.  
+✅ **Multiple Games** – Includes Tic-Tac-Toe, Rock, Paper, Scissors, Memory Card Game, and Number Guessing Game.  
 
 ---
 
@@ -45,6 +47,7 @@ Welcome to **Mini Games Hub** — a collection of fun, interactive games built w
 | **CSS** | Styling and responsive design |
 | **React Router** | Handles page navigation |
 | **React Icons** | Adds icons to buttons and labels |
+| **Lottie** | For smooth and customizable loading animations |
 | **GitHub Pages** | For deployment |
 
 ---
@@ -60,20 +63,24 @@ Welcome to **Mini Games Hub** — a collection of fun, interactive games built w
 ## 📂 Project Structure  
 ```
 mini-games-hub/
-├── public/                  # Static assets
+├── public/            # Static assets
 ├── src/
-│   ├── components/          # React components
-│   │   ├── LandingPage.jsx
-│   │   ├── TicTacToe.jsx
-│   │   ├── RockPaperScissors.jsx
-|   |   |== NumberGuessingGame.jsx
-|   |   |== MemoryCardGame.jsx
-│   ├── styles.css           # Global styles
-│   ├── App.jsx              # Main app component
-│   ├── index.jsx            # React entry point
-├── .gitignore               # Files to ignore in git
-├── package.json             # Project metadata and scripts
-├── README.md                # Project documentation
+│ ├── assets/          # Animation files
+│ │ ├── LoadingAnimation.json
+│ ├── components/      # React components
+│ │ ├── LandingPage.jsx
+│ │ ├── TicTacToe.jsx
+│ │ ├── RockPaperScissors.jsx
+│ │ ├── NumberGuessingGame.jsx
+│ │ ├── MemoryCardGame.jsx
+│ │ ├── LoadingScreen.jsx
+│ ├── styles.css              # Global styles
+│ ├── App.jsx                 # Main app component
+│ ├── index.jsx               # React entry point
+├── .gitignore                # Files to ignore in git
+├── package.json              # Project metadata and scripts
+├── README.md                 # Project documentation
+
 ```
 
 ---
