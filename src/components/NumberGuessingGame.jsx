@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
+import LoadingScreen from './LoadingScreen.jsx';
 
 export default function NumberGuessingGame() {
   const navigate = useNavigate();
@@ -13,7 +14,13 @@ export default function NumberGuessingGame() {
   const [guesses, setGuesses] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
-  const [gameStarted, setGameStarted] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   // Function to generate a random number in the selected range
   const generateRandomNumber = () => {
@@ -63,6 +70,10 @@ export default function NumberGuessingGame() {
     setGameWon(false);
   };
 
+  if (loading) {
+      return <LoadingScreen onComplete={() => setLoading(false)} />;
+    }
+  
   return (
     <div className="game-container">
       {/* Back Button */}

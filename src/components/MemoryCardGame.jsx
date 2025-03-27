@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
+import LoadingScreen from './LoadingScreen.jsx';
 
 const initialCards = [
   '🍎', '🍎', '🍌', '🍌', '🍉', '🍉', '🍇', '🍇',
@@ -13,6 +14,13 @@ export default function MemoryCardGame() {
   const [selectedCards, setSelectedCards] = useState([]);
   const [matchedPairs, setMatchedPairs] = useState([]);
   const [attempts, setAttempts] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   // Shuffle cards on game start
   useEffect(() => {
@@ -73,6 +81,11 @@ export default function MemoryCardGame() {
   };
 
   const isGameOver = matchedPairs.length === initialCards.length / 2;
+
+  if (loading) {
+    return <LoadingScreen onComplete={() => setLoading(false)} />;
+  }
+
 
   return (
     <div className="game-container">

@@ -1,7 +1,8 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
+import LoadingScreen from './LoadingScreen.jsx';
 
 const choices = ['Rock', 'Paper', 'Scissors'];
 
@@ -11,6 +12,13 @@ export default function RockPaperScissors() {
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState('');
   const [scores, setScores] = useState({ player: 0, computer: 0 });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const getResult = (player, computer) => {
     if (player === computer) return 'Draw';
@@ -46,6 +54,11 @@ export default function RockPaperScissors() {
     setScores({ player: 0, computer: 0 });
     resetGame();
   };
+
+  if (loading) {
+    return <LoadingScreen onComplete={() => setLoading(false)} />;
+  }
+
 
   return (
     <div className="game-container">

@@ -1,7 +1,8 @@
 
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
+import LoadingScreen from './LoadingScreen.jsx';
 
 export default function TicTacToe() {
   const navigate = useNavigate();
@@ -9,6 +10,12 @@ export default function TicTacToe() {
   const [xIsNext, setXIsNext] = useState(true);
   const [winner, setWinner] = useState(null);
   const [winningCells, setWinningCells] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleClick = (index) => {
     if (board[index] || winner) return;
@@ -50,44 +57,48 @@ export default function TicTacToe() {
 
   const isDraw = !board.includes(null) && !winner;
 
+  if (loading) {
+    return <LoadingScreen onComplete={() => setLoading(false)} />;
+  }
+
   return (
-    <div className="game-container">
-      <button className="back-button" onClick={() => navigate('/')}>← Back</button>
+      <div className="game-container">
+        <button className="back-button" onClick={() => navigate('/')}>← Back</button>
 
-      {/* Heading */}
-      <h1 className="game-heading">Tic Tac Toe</h1>
+        {/* Heading */}
+        <h1 className="game-heading">Tic Tac Toe</h1>
 
-      <div className={`board ${isDraw ? 'draw' : ''}`}>
-        {board.map((cell, index) => (
-          <button
-            key={index}
-            className={`cell ${
-              winningCells.includes(index) ? 'winning-cell' : isDraw ? 'draw-cell' : ''
-            }`}
-            onClick={() => handleClick(index)}
-            disabled={cell || winner}
-          >
-            {cell}
-          </button>
-        ))}
+        <div className={`board ${isDraw ? 'draw' : ''}`}>
+          {board.map((cell, index) => (
+            <button
+              key={index}
+              className={`cell ${
+                winningCells.includes(index) ? 'winning-cell' : isDraw ? 'draw-cell' : ''
+              }`}
+              onClick={() => handleClick(index)}
+              disabled={cell || winner}
+            >
+              {cell}
+            </button>
+          ))}
+        </div>
+
+        {/* Winner or Draw Message */}
+        {winner ? (
+          <div className="status">
+            🎉 Player {winner} wins!
+          </div>
+        ) : isDraw ? (
+          <div className="status">
+            🤝 It's a draw!
+          </div>
+        ) : (
+          <div className="status">
+            Current player: {xIsNext ? 'X' : 'O'}
+          </div>
+        )}
+
+        <button className="reset-btn" onClick={resetGame}>Reset</button>
       </div>
-
-      {/* Winner or Draw Message */}
-      {winner ? (
-        <div className="status">
-          🎉 Player {winner} wins!
-        </div>
-      ) : isDraw ? (
-        <div className="status">
-          🤝 It's a draw!
-        </div>
-      ) : (
-        <div className="status">
-          Current player: {xIsNext ? 'X' : 'O'}
-        </div>
-      )}
-
-      <button className="reset-btn" onClick={resetGame}>Reset</button>
-    </div>
   );
 }
