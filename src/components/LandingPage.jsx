@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import { FaGamepad, FaDice, FaBrain, FaPuzzlePiece } from 'react-icons/fa'; 
 import '../styles.css';
+import Footer from './Footer';
 
 export default function LandingPage() {
     console.log("LandingPage mounted");
@@ -24,6 +25,7 @@ export default function LandingPage() {
                     <FaPuzzlePiece className="icon" /> Memory Card Game
                 </button>
             </div>
+            <Footer />
         </div>
     );
 }

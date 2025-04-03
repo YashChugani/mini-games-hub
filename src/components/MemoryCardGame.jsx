@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import LoadingScreen from './LoadingScreen.jsx';
+import Footer from './Footer.jsx';
 
 const initialCards = [
   '🍎', '🍎', '🍌', '🍌', '🍉', '🍉', '🍇', '🍇',
@@ -114,6 +115,7 @@ export default function MemoryCardGame() {
 
       {/* Reset */}
       <button className="reset-btn" onClick={resetGame}>Restart</button>
+      <Footer />
     </div>
   );
 }

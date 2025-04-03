@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import LoadingScreen from './LoadingScreen.jsx';
+import Footer from './Footer.jsx';
 
 const choices = ['Rock', 'Paper', 'Scissors'];
 
@@ -109,6 +110,8 @@ export default function RockPaperScissors() {
           Reset Score
         </button>
       </div>
+
+      <Footer />
     </div>
   );
 }

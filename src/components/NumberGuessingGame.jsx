@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import LoadingScreen from './LoadingScreen.jsx';
+import Footer from './Footer.jsx';
 
 export default function NumberGuessingGame() {
   const navigate = useNavigate();
@@ -142,6 +143,8 @@ export default function NumberGuessingGame() {
       {gameStarted && (
         <button className="reset-btn" onClick={resetGame}>Play Again</button>
       )}
+
+      <Footer />
     </div>
   );
 }

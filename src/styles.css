@@ -67,6 +67,37 @@ h1 {
     gap: 1.5rem;
 }
 
+/* ==================== Footer Layout Styling ==================== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.footer-link {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff4081;
+    text-decoration: underline;
+}
+
+
+
+
 /* ==================== Landing Page Styling ==================== */
 /* General container styling */
 .landing-container {
@@ -78,6 +109,7 @@ h1 {
     background-color: #121212;/* Dark background */
     color: white;
     background: linear-gradient(135deg, #1c1c1c, #121212);
+    padding: 0 20px;
 }
 
 /* Heading styling */
@@ -133,6 +165,8 @@ h1 {
     width: 20px;
     height: 20px;
 }
+
+
 
 
 /* ==================== Loading Screen Styling ==================== */
