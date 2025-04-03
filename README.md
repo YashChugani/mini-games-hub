@@ -65,18 +65,19 @@ Welcome to **Mini Games Hub** — a collection of fun, interactive games built w
 mini-games-hub/
 ├── public/            # Static assets
 ├── src/
-│ ├── assets/          # Animation files
-│ │ ├── LoadingAnimation.json
-│ ├── components/      # React components
-│ │ ├── LandingPage.jsx
-│ │ ├── TicTacToe.jsx
-│ │ ├── RockPaperScissors.jsx
-│ │ ├── NumberGuessingGame.jsx
-│ │ ├── MemoryCardGame.jsx
-│ │ ├── LoadingScreen.jsx
-│ ├── styles.css              # Global styles
-│ ├── App.jsx                 # Main app component
-│ ├── index.jsx               # React entry point
+│   ├── assets/        # Animation files
+│   │   ├── LoadingAnimation.json
+│   ├── components/    # React components
+│   │   ├── LandingPage.jsx
+│   │   ├── TicTacToe.jsx
+│   │   ├── RockPaperScissors.jsx
+│   │   ├── NumberGuessingGame.jsx
+│   │   ├── MemoryCardGame.jsx
+│   │   ├── LoadingScreen.jsx
+│   │   ├── Footer.jsx         
+│   ├── styles.css              # Global styles
+│   ├── App.jsx                 # Main app component
+│   ├── index.jsx               # React entry point
 ├── .gitignore                # Files to ignore in git
 ├── package.json              # Project metadata and scripts
 ├── README.md                 # Project documentation
